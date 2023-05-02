@@ -1,5 +1,6 @@
 /*
 
+// 6개의 element를 가진 객체 배열 생성
 var Users = [
     {name:'소녀시대',age:20},
     {name:'걸스데이',age:21},
@@ -8,7 +9,7 @@ var Users = [
     {name:'카라',age:24},
     {name:'원더걸스',age:25}
 ];
-
+// 데이터 배열 끝에 삽입
 Users.push({name:'티아라',age:23});
 
 console.log('사용자 수 : %d',Users.length);

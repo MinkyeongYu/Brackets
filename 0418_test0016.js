@@ -1,21 +1,24 @@
-function add(a, b, callback) {
-    var result = a + b;
-    callback(result);
-    var count = 0;
-    var history = function() {
-        count++;
-        return count + ' : ' + a + ' + ' + b + ' = ' + result;
-    };
-    return history;
+//class Person {
+//    function Person(name, age) {
+//        this.name = name;
+//        this.age = age;
+//    }
+//
+//    Person.prototype.walk = function(speed) {
+//        console.log(speed + 'km 속도로 걸어갑니다.');
+//    }
+//}
+
+// Person class생성자
+function Person(name, age) {
+    this.name = name;
+    this.age = age;
 }
+// 프로토타입 함수 생성
+Person.prototype.walk = function(speed) {
+    console.log(speed + 'km 속도로 걸어갑니다.');
+}
+// 객체 생성
+var person01 = new Person('소녀시대', 20);
 
-var add_history = add(10, 10, function(result) {
-    console.log('파라미터로 전달된 콜백 함수 호출됨.');
-    console.log('더하기 (10, 10)의 결과 : %d', result);
-});
-
-console.log('결과 값으로 받은 함수 실행 결과 : ' + add_history());
-console.log('결과 값으로 받은 함수 실행 결과 : ' + add_history());
-console.log('결과 값으로 받은 함수 실행 결과 : ' + add_history());
-console.log('결과 값으로 받은 함수 실행 결과 : ' + add_history());
-console.log('결과 값으로 받은 함수 실행 결과 : ' + add_history());
+console.log(person01.name + '객체의 age를 호출합니다.\n' + person01.age + '\n walk(10)을 호출합니다.' + person01.walk(10));
